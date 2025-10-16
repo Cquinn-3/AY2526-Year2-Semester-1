@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class moiving : MonoBehaviour
- 
+public class palerWalk : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

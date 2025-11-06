@@ -17,7 +17,7 @@ public class FireBall : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             Debug.Log("Has shot");
-            GameObject FBall = Instantiate(Projectl, transform.position,transform.rotation);
+            GameObject FBall = Instantiate(Projectl,transform. position,transform.rotation);
             FBall.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, launchVelocity));
         }
     }

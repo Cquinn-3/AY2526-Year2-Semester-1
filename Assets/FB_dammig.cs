@@ -1,20 +1,52 @@
 using UnityEngine;
 
-public class FB_dammig : MonoBehaviour
+public class ObjectDestruction : MonoBehaviour
 {
-  
-    
+    public bool destroyAfterTime = true;
+    public float destructionTime = 5f;
+
+    public bool destroyOnCollision = true;
+    public int collisionDestroyThreshold = 2; // Number of collisions before destruction
+    private int collisionCount;
+
+    public bool destroyOffScreen = true;
+
+    public bool destroyIfIdle = false;
+    public float idleTimeThreshold = 3f;
+    private float lastMoveTime;
+    private Vector3 lastPosition;
+
+    private Camera mainCamera;
+    private bool isOffScreen = false;
 
     void Start()
     {
-  
-    }
+        mainCamera = Camera.main;
+        lastPosition = transform.position;
+        lastMoveTime = Time.time;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (destroyAfterTime)
+        {
+            Destroy(gameObject, destructionTime);
+            //Debug.Log("Destroyed: " + gameObject.name + " after " + destructionTime + " seconds of time");
         }
     }
 
+    
 
+
+
+
+
+    void OnCollisionEnter(Collision collision)
+    {
+        collisionCount++;
+        if (destroyOnCollision && collisionCount >= collisionDestroyThreshold)
+        {
+            Destroy(gameObject);
+            //Debug.Log("Destroyed: " + gameObject.name + " after " + collisionCount + " collisions "+ "(" + collision.gameObject.name + ")");
+        }
+    }
+}
+
+   

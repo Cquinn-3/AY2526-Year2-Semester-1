@@ -34,4 +34,8 @@ public class palerWalk : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeigt * -2 * gravity);
         }
     }
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 }

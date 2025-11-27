@@ -8,6 +8,7 @@ public class FireBall : MonoBehaviour
     public float launchVelocity = 700f;
     public GameObject fBall;
     public GameObject spawnpoint;
+    public GameObject onCollectEffect;
    
     void Start()
     {
@@ -22,4 +23,14 @@ public class FireBall : MonoBehaviour
             FBall.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, launchVelocity));
         }
     }
+
+    //public void OnCollision(Collider other)
+    //{
+    //    Debug.Log("Collided");
+    //    if (other.CompareTag("Wall"))
+    //    {
+    //        Instantiate(onCollectEffect, transform.position, transform.rotation);
+    //        Debug.Log("hit wall");
+    //    }
+    //}
 }

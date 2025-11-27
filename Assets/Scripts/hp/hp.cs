@@ -13,19 +13,19 @@ public class hp : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            TakeDamge(20);
-        }
-    }
+   // void Update()
+ //   {
+        //if (Input.GetKeyUp(KeyCode.Escape))
+      //  {
+          //  TakeDamge(20);
+   //     }
+  //  }
 
-    void TakeDamge(int damage)
-    {
-        cyrrentHealth -= damage;
-        bar.slider.value -= damage;
-    }
+   // void TakeDamge(int damage)
+    //{
+     //   cyrrentHealth -= damage;
+     //   bar.slider.value -= damage;
+   // }
 
 
 }

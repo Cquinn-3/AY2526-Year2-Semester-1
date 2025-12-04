@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class FireBall : MonoBehaviour
 {
@@ -21,6 +23,9 @@ public class FireBall : MonoBehaviour
             Debug.Log("Has shot");
             GameObject FBall = Instantiate(fBall,transform.position,transform.rotation);
             FBall.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 0, launchVelocity));
+
+            soundManager.PlaySound(SoundType.FierBall,0.1f);
+
         }
     }
 

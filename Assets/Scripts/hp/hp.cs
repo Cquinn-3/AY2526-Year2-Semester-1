@@ -2,30 +2,33 @@ using UnityEngine;
 using UnityEngine.UI;
 public class hp : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int cyrrentHealth;
+    public float Health;
+    public float MaxHealth;
+    public Image HealthBar;
 
-    public hp_bar bar;
-    //public Healthbar healthBar;
     void Start()
     {
-        cyrrentHealth = maxHealth;
+        Health = MaxHealth;
     }
 
-    // Update is called once per frame
-   // void Update()
- //   {
-        //if (Input.GetKeyUp(KeyCode.Escape))
-      //  {
-          //  TakeDamge(20);
-   //     }
-  //  }
+    private void Update()
+    {
+        HealthBar.fillAmount = Mathf.Clamp(Health / MaxHealth, 0, 1);
+    }
 
-   // void TakeDamge(int damage)
-    //{
-     //   cyrrentHealth -= damage;
-     //   bar.slider.value -= damage;
-   // }
+    public void TakeDamage(int damage)
+    {
+        Debug.Log("Hit");
+        Health -= damage;
+        
+    }
+
+    public void healDamage(int heal)
+    {
+
+        Health += heal; 
+    }
+
 
 
 }

@@ -1,4 +1,8 @@
+using System.Collections;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class palerWalk : MonoBehaviour
 {
@@ -11,8 +15,19 @@ public class palerWalk : MonoBehaviour
     public float jumpHeigt = 3f;
     Vector3 velocity;
     bool isGrounded;
+    private footSeps footSeps;
+    void Start()
+    {
+        footSeps = FindAnyObjectByType<footSeps>();
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     void Update()
     {
+        //if(isPlaying == false)
+        //{
+        //    isPlaying = true;
+        //    StartCoroutine(PlaySound());
+        //}      
         isGrounded = Physics.CheckSphere(groundcheack.position, groundDistanc, groundMask);
         if (isGrounded && velocity .y <0)
         {
@@ -32,10 +47,23 @@ public class palerWalk : MonoBehaviour
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeigt * -2 * gravity);
+
         }
+
+        controller.Move(velocity * Time.deltaTime);
+        {
+            if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
+            {
+                StartCoroutine(PlaySound());
+            }
+        }
+        
+        
+
     }
-    public void Start()
+    private IEnumerator PlaySound()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        footSeps.PlayFootSteps();
+        yield return new WaitForSecondsRealtime(1);
     }
 }

@@ -42,6 +42,7 @@ public class DoorBreak : MonoBehaviour
     {
         Instantiate(oncollectEffect, this.gameObject.transform.localPosition, this.gameObject.transform.localRotation);
         doorDamageLevel++; //damaget goes to 1, 2 ,3
+        soundManager.PlaySound(SoundType.WallBeracking, 1f);
 
         //switch between door damages
         switch (doorDamageLevel)
@@ -64,7 +65,6 @@ public class DoorBreak : MonoBehaviour
             default:
                 Debug.Log("no door left");
                 break;
-
 
 
 

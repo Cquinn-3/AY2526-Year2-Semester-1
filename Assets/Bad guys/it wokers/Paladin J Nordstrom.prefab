@@ -97,14 +97,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navAgent: {fileID: 1881765819517901668}
   playerTransform: {fileID: 0}
-  firePoint: {fileID: 0}
-  projectilePrefab: {fileID: 0}
   terrainLayer:
     serializedVersion: 2
     m_Bits: 8
   playerLayerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   patrolRadius: 10
   attackCooldown: 1
   forwardShotForce: 10

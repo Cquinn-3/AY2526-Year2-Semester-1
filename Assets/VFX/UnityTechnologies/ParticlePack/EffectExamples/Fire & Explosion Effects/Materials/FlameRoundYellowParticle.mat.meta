@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f724def9d6210df4cbb0035213878a04
+timeCreated: 1472825013
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 36897
+  packageName: Old Sea Port
+  packageVersion: 1.2
+  assetPath: Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire & Explosion
+    Effects/Materials/FlameRoundYellowParticle.mat
+  uploadId: 387609

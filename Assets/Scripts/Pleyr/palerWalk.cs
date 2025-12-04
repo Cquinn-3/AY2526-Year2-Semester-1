@@ -54,7 +54,13 @@ public class palerWalk : MonoBehaviour
         {
             if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
             {
-                StartCoroutine(PlaySound());
+                //StartCoroutine(PlaySound());
+                footSeps.PlayFootSteps();
+
+            }
+            else if (Input.GetButtonUp("Horizontal") || Input.GetButtonUp("Vertical"))
+            {
+                footSeps.StopFootSteps();
             }
         }
         

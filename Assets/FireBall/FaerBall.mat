@@ -43,6 +43,7 @@ Material:
     - _CastShadows: 1
     - _DstBlend: 0
     - _MainTexPower: 1.1
+    - _QueueControl: 1
     - _SrcBlend: 1
     - _Surface: 0
     - _ZWrite: 1

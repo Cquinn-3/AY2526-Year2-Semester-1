@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5266529326849694280
+--- !u!114 &-1656577003747239721
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,40 +20,35 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Flame
+  m_Name: FaerBall 4
   m_Shader: {fileID: -6465566751694194690, guid: 72e57e8b3b6dba040adca589add286fe, type: 3}
-  m_Parent: {fileID: 2100000, guid: 49c6d699d3e14274eb5f61cd2fde9ea1, type: 2}
-  m_ModifiedSerializedProperties: 18
-  m_ValidKeywords:
-  - _SURFACE_TYPE_TRANSPARENT
+  m_Parent: {fileID: -876546973899608171, guid: 72e57e8b3b6dba040adca589add286fe, type: 3}
+  m_ModifiedSerializedProperties: 16
+  m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 5
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap:
-    RenderType: Transparent
+    RenderType: Opaque
   disabledShaderPasses:
-  - DepthOnly
   - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 088442d18ac9f9c499308452f62d7bd8, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _DstBlend: 10
-    - _MainTexPower: 1
-    - _QueueControl: 0
-    - _SrcBlend: 5
-    - _Surface: 1
-    - _ZWrite: 0
+    - _CastShadows: 1
+    - _DstBlend: 0
+    - _MainTexPower: 0.66
+    - _QueueControl: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _MainTexSpeed: {r: 1, g: 1, b: 0, a: 0}
+    - _Color: {r: 1, g: 0.48516423, b: 0, a: 1}
+    - _MainTexSpeed: {r: 0, g: 0.94, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

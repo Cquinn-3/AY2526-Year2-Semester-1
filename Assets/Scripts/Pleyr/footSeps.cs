@@ -18,5 +18,10 @@ public class footSeps : MonoBehaviour
         footStepSource.volume = (Random.Range(0.5f, 06f));
         footStepSource.pitch = (Random.Range(0.8f, 1.2f));
         footStepSource.Play();
+
+    }
+    public void StopFootSteps()
+    {
+        footStepSource.Stop();
     }
 }

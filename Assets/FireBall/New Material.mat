@@ -40,6 +40,7 @@ Material:
     - _CastShadows: 1
     - _DstBlend: 10
     - _MainTexPower: 0.35
+    - _QueueControl: 1
     - _SrcBlend: 5
     - _Surface: 1
     - _ZTest: 8

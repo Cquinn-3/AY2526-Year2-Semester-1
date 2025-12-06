@@ -16,6 +16,7 @@ public class sokeVEF : MonoBehaviour
         if (collision.gameObject.tag == "Fireball")
         {
             Debug.Log("Fireball : " + collision.gameObject.name);
+            Instantiate(oncollectEffect, transform.position, transform.rotation);
             //DamageDoor();
         }
     }
